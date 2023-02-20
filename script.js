@@ -22,8 +22,8 @@ astro.addEventListener("submit", (e) => {
       else {
         // perform operation with form input
         alert("This form has been successfully submitted!");
-        document.write('This form has a Longitude of ', long.value, 'and latitude of ', lat.value);
-        messages.push('This form has a xcord of ${xcord.value} and password of ${ycord.value}');
+        document.write('This form has a Longitude of ', long.value, ' and latitude of ', lat.value);
+        //messages.push('This form has a xcord of ${xcord.value} and password of ${ycord.value}');
         //xcord.value = "";
         //ycord.value = "";
       }
