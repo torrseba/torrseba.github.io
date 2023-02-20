@@ -32,7 +32,7 @@ astro.addEventListener("submit", (e) => {
       else {
         // perform operation with form input
         alert("This form has been submitted...Successfully?");
-        fetch(url, {
+        const response = fetch(url, {
             method: 'POST', // *GET, POST, PUT, DELETE, etc.
             ///mode: 'cors', // no-cors, *cors, same-origin
             //cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
@@ -65,6 +65,7 @@ astro.addEventListener("submit", (e) => {
             
         
         document.write('This form has a Longitude of ', long.value, ' and latitude of ', lat.value);
+        document.write(response);
         //messages.push('This form has a xcord of ${xcord.value} and password of ${ycord.value}');
         //xcord.value = "";
         //ycord.value = "";
