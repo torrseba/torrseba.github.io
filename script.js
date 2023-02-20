@@ -1,7 +1,7 @@
-alert('test')
+//alert('test')
 //document.body.innerHTML = '<h1>lol<h1>';
-let input1 =document.getElementsByName('xcoordinate');
-console.log(input1);
+//let input1 =document.getElementsByName('xcoordinate');
+//console.log(input1);
 
 let astro = document.getElementById("astro");
 astro.addEventListener("submit", (e) => {
