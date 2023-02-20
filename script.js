@@ -1,2 +1,2 @@
-//alert('test')
-document.body.innerHTML = '<h1>lol<h1>';
+alert('test')
+//document.body.innerHTML = '<h1>lol<h1>';
