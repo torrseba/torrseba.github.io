@@ -34,12 +34,12 @@ astro.addEventListener("submit", (e) => {
         alert("This form has been submitted...Successfully?");
         const response = fetch(url, {
             method: 'POST', // *GET, POST, PUT, DELETE, etc.
-            ///mode: 'cors', // no-cors, *cors, same-origin
-            //cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-            //credentials: 'same-origin', // include, *same-origin, omit
+            mode: 'cors', // no-cors, *cors, same-origin
+            cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+            credentials: 'same-origin', // include, *same-origin, omit
             headers: {
               'Content-Type': 'application/json',
-              'authorization':'Basic hash1',
+              'authorization':hash1,
               'Origin':'https://torrseba.github.io/',
               'Host':'https://torrseba.github.io/',
 
