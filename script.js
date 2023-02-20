@@ -31,7 +31,7 @@ astro.addEventListener("submit", (e) => {
       } 
       else {
         // perform operation with form input
-        alert("This form has been successfully submitted!");
+        alert("This form has been submitted...Successfully?");
         fetch(url, {
             method: 'POST', // *GET, POST, PUT, DELETE, etc.
             ///mode: 'cors', // no-cors, *cors, same-origin
