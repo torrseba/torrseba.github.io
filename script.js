@@ -15,6 +15,7 @@ astro.addEventListener("submit", (e) => {
       } else {
         // perform operation with form input
         alert("This form has been successfully submitted!");
+        document.write(xcord.value);
         console.log(
           `This form has a xcord of ${xcord.value} and password of ${ycord.value}`
         );
