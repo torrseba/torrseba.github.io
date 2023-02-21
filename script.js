@@ -21,7 +21,7 @@ const astro = document.getElementById("astro");
 astro.addEventListener("submit", (e) => {
     e.preventDefault();
 
-fetch("https://api.astronomyapi.com/api/v2/studio/star-chart", {
+const lol = fetch("https://api.astronomyapi.com/api/v2/studio/star-chart", {
   "headers": {
     "accept": "application/json, text/plain, */*",
     "accept-language": "en-US,en;q=0.9",
@@ -56,3 +56,5 @@ fetch("https://api.astronomyapi.com/api/v2/studio/star-chart", {
   "method": "OPTIONS"
 });
 })
+document.write(lol);
+console.log(lol);
