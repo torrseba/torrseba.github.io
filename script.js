@@ -22,7 +22,7 @@ astro.addEventListener("submit", (e) => {
     e.preventDefault();
     alert("jawnski submitted");
 
-    fetch("https://api.astronomyapi.com/api/v2/studio/star-chart", {
+    const response = fetch("https://api.astronomyapi.com/api/v2/studio/star-chart", {
   "headers": {
     "accept": "application/json, text/plain, */*",
     "accept-language": "en-US,en;q=0.9",
@@ -42,4 +42,5 @@ astro.addEventListener("submit", (e) => {
   "body": "{\"style\":\"inverted\",\"observer\":{\"latitude\":33.775867,\"longitude\":-84.39733,\"date\":\"2023-02-20\"},\"view\":{\"type\":\"area\",\"parameters\":{\"position\":{\"equatorial\":{\"rightAscension\":0,\"declination\":0}},\"zoom\":6}}}",
   "method": "POST"
 });
+document.write(response);
 }) 
