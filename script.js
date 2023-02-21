@@ -21,7 +21,7 @@ const astro = document.getElementById("astro");
 astro.addEventListener("submit", (e) => {
     e.preventDefault();
 
-const lol = fetch("https://api.astronomyapi.com/api/v2/studio/star-chart", {
+    fetch("https://api.astronomyapi.com/api/v2/studio/star-chart", {
   "headers": {
     "accept": "application/json, text/plain, */*",
     "accept-language": "en-US,en;q=0.9",
@@ -38,23 +38,7 @@ const lol = fetch("https://api.astronomyapi.com/api/v2/studio/star-chart", {
     "Referer": "http://demo.astronomyapi.com/",
     "Referrer-Policy": "strict-origin-when-cross-origin"
   },
-  "body": "{\"style\":style,\"observer\":{\"latitude\":lat,\"longitude\":long,\"date\":date},\"view\":{\"type\":\"area\",\"parameters\":{\"position\":{\"equatorial\":{\"rightAscension\":0,\"declination\":0}},\"zoom\":6}}}",
+  "body": "{\"style\":\"inverted\",\"observer\":{\"latitude\":33.775867,\"longitude\":-84.39733,\"date\":\"2023-02-20\"},\"view\":{\"type\":\"area\",\"parameters\":{\"position\":{\"equatorial\":{\"rightAscension\":0,\"declination\":0}},\"zoom\":6}}}",
   "method": "POST"
-}); ;
-fetch("https://api.astronomyapi.com/api/v2/studio/star-chart", {
-  "headers": {
-    "accept": "*/*",
-    "accept-language": "en-US,en;q=0.9",
-    "sec-fetch-dest": "empty",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-site": "cross-site",
-    "sec-gpc": "1",
-    "Referer": "http://demo.astronomyapi.com/",
-    "Referrer-Policy": "strict-origin-when-cross-origin"
-  },
-  "body": null,
-  "method": "OPTIONS"
 });
 })
-document.write(lol);
-console.log(lol);
