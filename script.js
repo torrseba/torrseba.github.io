@@ -18,6 +18,9 @@ const applicationSecret = '34fa54cd9605e3ba1185434c1511f29fb26cb1685121b0dd701b4
 const hash1 = btoa(`${applicationId}:${applicationSecret}`);
 const astro = document.getElementById("astro");
 
+astro.addEventListener("submit", (e) => {
+    e.preventDefault();
+
 fetch("https://api.astronomyapi.com/api/v2/studio/star-chart", {
   "headers": {
     "accept": "application/json, text/plain, */*",
@@ -52,3 +55,4 @@ fetch("https://api.astronomyapi.com/api/v2/studio/star-chart", {
   "body": null,
   "method": "OPTIONS"
 });
+})
