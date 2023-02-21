@@ -18,8 +18,8 @@ const applicationSecret = '34fa54cd9605e3ba1185434c1511f29fb26cb1685121b0dd701b4
 const hash1 = btoa(`${applicationId}:${applicationSecret}`);
 const astro = document.getElementById("astro");
 
-//const http = new XMLHttpRequest();
-const url =  'https://api.astronomyapi.com/api/v2/studio/star-chart'
+const req = new XMLHttpRequest();
+const url =  'https://api.astronomyapi.com/api/v2/studio/star-chart';
 
 astro.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -31,8 +31,32 @@ astro.addEventListener("submit", (e) => {
       } 
       else {
         // perform operation with form input
-        alert("This form has been submitted...Successfully?");
-        const response = fetch(url, {
+        alert("This form has been submitted...Successfully? 0_0");
+        
+        console.log(req)
+        req.open('POST',url,true)
+        req.setRequestHeader('Content-Type','application/json; charset=UTF-8')
+        req.onreadystatechange = () => {
+            if(req.readyState === 4 && req.status === 201){
+                let object = JSON.parse(req.response)
+                document.write(boject);
+            }
+        }
+        let body = JSON.stringify({
+        latitude:32.001,
+        longitude:76.011,
+        toDate: 2023-2-19,
+        fromDate:2023-2-19,
+        elevation:0,
+        style:'inverted',
+        type:'area',
+        time:'08:00:00',
+        'rightAscension':0,
+        'declination':0,
+        'zoom':6
+        })
+        req.send(body)
+        /*const response = fetch(url, {
             method: 'POST', // *GET, POST, PUT, DELETE, etc.
             mode: 'cors', // no-cors, *cors, same-origin
             cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
@@ -61,14 +85,14 @@ astro.addEventListener("submit", (e) => {
             
             
             //JSON.stringify(data) // body data type must match "Content-Type" header
-          });
+          });*/
             
         
-        document.write('This form has a Longitude of ', long.value, ' and latitude of ', lat.value);
-        document.write(response);
+        //document.write('This form has a Longitude of ', long.value, ' and latitude of ', lat.value);
+        //document.write(response);
         //messages.push('This form has a xcord of ${xcord.value} and password of ${ycord.value}');
         //xcord.value = "";
         //ycord.value = "";
-      }
+        }
     // handle submit
   });
