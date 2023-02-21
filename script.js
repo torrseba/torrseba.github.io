@@ -36,8 +36,8 @@ astro.addEventListener("submit", (e) => {
     "sec-fetch-site": "cross-site",
     "sec-gpc": "1",
     "x-requested-with": "XMLHttpRequest",
-    "Referer": "http://demo.astronomyapi.com/",
-    "Referrer-Policy": "strict-origin-when-cross-origin"
+    "Referer": "http://demo.astronomyapi.com/"
+    //"Referrer-Policy": "strict-origin-when-cross-origin"
   },
   "body": "{\"style\":\"inverted\",\"observer\":{\"latitude\":33.775867,\"longitude\":-84.39733,\"date\":\"2023-02-20\"},\"view\":{\"type\":\"area\",\"parameters\":{\"position\":{\"equatorial\":{\"rightAscension\":0,\"declination\":0}},\"zoom\":6}}}",
   "method": "POST"
