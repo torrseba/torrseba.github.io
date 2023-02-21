@@ -18,81 +18,37 @@ const applicationSecret = '34fa54cd9605e3ba1185434c1511f29fb26cb1685121b0dd701b4
 const hash1 = btoa(`${applicationId}:${applicationSecret}`);
 const astro = document.getElementById("astro");
 
-const req = new XMLHttpRequest();
-const url =  'https://api.astronomyapi.com/api/v2/studio/star-chart';
-
-astro.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    //let xcord = document.getElementByname("xcoordinate");
-    //let ycord = document.getElementByname("ycoordinate");
-    if (long.value == "" || lat.value == "") {
-        alert("Ensure you input a value in both fields!");
-      } 
-      else {
-        // perform operation with form input
-        alert("This form has been submitted...Successfully? 0_0");
-        
-        console.log(req)
-        req.open('POST',url,true)
-        req.setRequestHeader('Content-Type','application/json; charset=UTF-8')
-        req.onreadystatechange = () => {
-            if(req.readyState === 4 && req.status === 201){
-                let object = JSON.parse(req.response)
-                document.write(boject);
-            }
-        }
-        let body = JSON.stringify({
-        latitude:32.001,
-        longitude:76.011,
-        toDate: 2023-2-19,
-        fromDate:2023-2-19,
-        elevation:0,
-        style:'inverted',
-        type:'area',
-        time:'08:00:00',
-        'rightAscension':0,
-        'declination':0,
-        'zoom':6
-        })
-        req.send(body)
-        /*const response = fetch(url, {
-            method: 'POST', // *GET, POST, PUT, DELETE, etc.
-            mode: 'cors', // no-cors, *cors, same-origin
-            cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-            credentials: 'same-origin', // include, *same-origin, omit
-            headers: {
-              'Content-Type': 'application/json',
-              'authorization':hash1,
-              'Origin':'https://torrseba.github.io/',
-              'Host':'https://torrseba.github.io/',
-
-              // 'Content-Type': 'application/x-www-form-urlencoded',
-            },
-            redirect: 'follow', // manual, *follow, error
-            referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-            body: {
-                'latitude':lat,
-                'longitude':long,
-                'date': date,
-                'style':style,
-                'type':'area',
-                'rightAscension':RightA,
-                'declination':Declination,
-                'zoom':zoom
-
-            }
-            
-            
-            //JSON.stringify(data) // body data type must match "Content-Type" header
-          });*/
-            
-        
-        //document.write('This form has a Longitude of ', long.value, ' and latitude of ', lat.value);
-        //document.write(response);
-        //messages.push('This form has a xcord of ${xcord.value} and password of ${ycord.value}');
-        //xcord.value = "";
-        //ycord.value = "";
-        }
-    // handle submit
-  });
+fetch("https://api.astronomyapi.com/api/v2/studio/star-chart", {
+  "headers": {
+    "accept": "application/json, text/plain, */*",
+    "accept-language": "en-US,en;q=0.9",
+    "authorization": "Basic MTJiZDhjMDItYjJiOS00Y2Q5LWE1MjItNmIzZjYzMjM0NjkzOjM0ZmE1NGNkOTYwNWUzYmExMTg1NDM0YzE1MTFmMjlmYjI2Y2IxNjg1MTIxYjBkZDcwMWI0N2FiMWM0YmUwYWVjNDE0ODgzZjcxMzI1OTNlYTEzNWVmYTVlNzM3NTA3ZGMyMWY1YmFhMGY3YWNlMjlkOTRkYThjNTE2NjI4YzYzN2QyMTM5N2I5ZTlmNmRiYTBhMjRiZjYwMmQzYTNkMWI2YTkxNjIyODk1YTM4NDdjODM3M2VjZDc1YzcxMTFlZTdlOWE0ZjZiYzU4MTRmMDQ5ODgxNzZmMTRhMDA5MDBm",
+    "content-type": "application/json;charset=UTF-8",
+    "sec-ch-ua": "\"Chromium\";v=\"110\", \"Not A(Brand\";v=\"24\", \"Google Chrome\";v=\"110\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site",
+    "sec-gpc": "1",
+    "x-requested-with": "XMLHttpRequest",
+    "Referer": "http://demo.astronomyapi.com/",
+    "Referrer-Policy": "strict-origin-when-cross-origin"
+  },
+  "body": "{\"style\":style,\"observer\":{\"latitude\":lat,\"longitude\":long,\"date\":date},\"view\":{\"type\":\"area\",\"parameters\":{\"position\":{\"equatorial\":{\"rightAscension\":0,\"declination\":0}},\"zoom\":6}}}",
+  "method": "POST"
+}); ;
+fetch("https://api.astronomyapi.com/api/v2/studio/star-chart", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "en-US,en;q=0.9",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site",
+    "sec-gpc": "1",
+    "Referer": "http://demo.astronomyapi.com/",
+    "Referrer-Policy": "strict-origin-when-cross-origin"
+  },
+  "body": null,
+  "method": "OPTIONS"
+});
