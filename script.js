@@ -32,7 +32,7 @@ astro.addEventListener("submit", (e) => {
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\"",
     "sec-fetch-dest": "empty",
-    "sec-fetch-mode": "cors",
+    "sec-fetch-mode": "no-cors",
     "sec-fetch-site": "cross-site",
     "sec-gpc": "1",
     "x-requested-with": "XMLHttpRequest",
