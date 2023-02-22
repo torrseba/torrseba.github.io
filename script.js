@@ -41,6 +41,15 @@ astro.addEventListener("submit", (e) => {
   },
   "body": "{\"style\":\"inverted\",\"observer\":{\"latitude\":33.775867,\"longitude\":-84.39733,\"date\":\"2023-02-20\"},\"view\":{\"type\":\"area\",\"parameters\":{\"position\":{\"equatorial\":{\"rightAscension\":0,\"declination\":0}},\"zoom\":6}}}",
   "method": "POST"
-});
-document.write(response);
-}) 
+})
+.then(function(response){
+    return response.json();
+})
+.then(function(data){
+    console.log(data)
+    display_image(data.message)
+})
+.catch(function(error){
+    console.log("Error lolz " + error);
+})
+}) ;
