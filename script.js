@@ -18,6 +18,14 @@ const applicationSecret = '34fa54cd9605e3ba1185434c1511f29fb26cb1685121b0dd701b4
 const hash1 = btoa(`${applicationId}:${applicationSecret}`);
 const astro = document.getElementById("astro");
 
+function displayImage(src, width, height) {
+    var img = document.createElement("img");
+    img.src = src;
+    img.width = width;
+    img.height = height;
+    document.body.appendChild(img);
+   }
+
 astro.addEventListener("submit", (e) => {
     e.preventDefault();
     alert("jawnski submitted");
