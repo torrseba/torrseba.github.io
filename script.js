@@ -58,6 +58,7 @@ astro.addEventListener("submit", (e) => {
     return response.json();
 })
 .then(function(data){
+    str = JSON.stringify(data);
     console.log(data);
     //document.write(data.imageUrl);
     document.write(data);
