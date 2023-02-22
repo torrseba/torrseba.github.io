@@ -55,7 +55,7 @@ astro.addEventListener("submit", (e) => {
 })
 .then(function(data){
     console.log(data)
-    displayImage(data.message, 320,250);
+    displayImage(data, 320,250);
 })
 .catch(function(error){
     console.log("Error lolz " + error);
