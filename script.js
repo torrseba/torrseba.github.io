@@ -4,7 +4,7 @@
 //console.log(input1);
 const long = document.getElementById("long");
 const lat = document.getElementById("lat");
-const date = document.getElementById("date");
+const dat = document.getElementById("date");
 const style = document.getElementById("style");
 const type = document.getElementById("type");
 const RightA = document.getElementById("RightA");
@@ -54,7 +54,7 @@ astro.addEventListener("submit", (e) => {
     //"Referrer-Policy": "strict-origin-when-cross-origin"
   },
   method: "POST",
-  body:JSON.stringify({style:"inverted",observer:{latitude:lat,longitude:long,date:date},view:{type:"area",parameters:{position:{equatorial:{rightAscension:0,declination:0}},zoom:6}}})
+  body:JSON.stringify({style:"inverted",observer:{latitude:lat.value,longitude:long.value,date:dat.value},view:{type:"area",parameters:{position:{equatorial:{rightAscension:0,declination:0}},zoom:6}}})
 })
 .then(function(response){
     return response.json();
