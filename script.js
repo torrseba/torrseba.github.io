@@ -32,7 +32,7 @@ function displayImage(src, width, height) {
 
 astro.addEventListener("submit", (e) => {
     e.preventDefault();
-    alert("jawnski submitted");
+    //alert("jawnski submitted");
 
     fetch("https://api.astronomyapi.com/api/v2/studio/star-chart", {
   "headers": {
@@ -60,14 +60,14 @@ astro.addEventListener("submit", (e) => {
 .then(function(data){
     var str = JSON.stringify(data);
     var jsonObj = JSON.parse(str);
-    console.log(data);
-    console.log(str);
+    //console.log(data);
+    //console.log(str);
     //console.log(str.data.imageUrl);
     //document.write(data.imageUrl);
-    document.write(str);
+    //document.write(str);
     console.log(jsonObj.data.imageUrl);
     //document.write(str.data.imgUrl);
-    displayImage(jsonObj.data.imageUrl, 300, 300);
+    displayImage(jsonObj.data.imageUrl, 500, 500);
     /////////displayImage(str.data, 300, 300);
 })
 .catch(function(error){
