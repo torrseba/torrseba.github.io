@@ -18,17 +18,19 @@ const applicationSecret = '34fa54cd9605e3ba1185434c1511f29fb26cb1685121b0dd701b4
 const hash1 = btoa(`${applicationId}:${applicationSecret}`);
 const astro = document.getElementById("astro");
 
-function displayImage(src, width, height) {
-    var img = document.createElement("img");
-    img.src = src;
-   img.width = width;
-    img.height = height;
-    document.body.appendChild(img);
-   }
+//function displayImage(src, width, height) {
+//    var img = document.createElement("img");
+//    img.src = src;
+ //  img.width = width;
+//    img.height = height;
+//    document.body.appendChild(img);
+//   }
 
-//function displayImage(image){
-//    document.getElementById("img2").src = image;
-//}
+function displayImage(src, width, height){
+    document.getElementById("img2").src = src;
+    document.getElementById("img2").width = width;
+    document.getElementById("img2").height = height;
+}
 
 astro.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -67,7 +69,7 @@ astro.addEventListener("submit", (e) => {
     //document.write(str);
     console.log(jsonObj.data.imageUrl);
     //document.write(str.data.imgUrl);
-    displayImage(jsonObj.data.imageUrl, 500, 500);
+    displayImage(jsonObj.data.imageUrl, 700, 700);
     /////////displayImage(str.data, 300, 300);
 })
 .catch(function(error){
