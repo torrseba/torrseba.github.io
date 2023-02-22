@@ -65,9 +65,9 @@ astro.addEventListener("submit", (e) => {
     //console.log(str.data.imageUrl);
     //document.write(data.imageUrl);
     document.write(str);
-    console.log(jsonObj.data);
+    console.log(jsonObj.data.imageUrl);
     //document.write(str.data.imgUrl);
-    //displayImage(data.imageUrl);
+    displayImage(jsonObj.data.imageUrl);
     /////////displayImage(str.data, 300, 300);
 })
 .catch(function(error){
