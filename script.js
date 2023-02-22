@@ -34,7 +34,7 @@ astro.addEventListener("submit", (e) => {
     e.preventDefault();
     alert("jawnski submitted");
 
-    const response = fetch("https://api.astronomyapi.com/api/v2/studio/star-chart", {
+    fetch("https://api.astronomyapi.com/api/v2/studio/star-chart", {
   "headers": {
     "accept": "application/json, text/plain, */*",
     "accept-language": "en-US,en;q=0.9",
@@ -58,10 +58,11 @@ astro.addEventListener("submit", (e) => {
     return response.json();
 })
 .then(function(data){
-    console.log(data);
-    document.write(data.message);
+    console.log(data.imageUrl);
+    document.write(data.imageUrl);
     //document.write(data.imageUrl);
-    displayImage(data.message);
+    displayImage(data.imageUrl);
+    displayImage(data);
 })
 .catch(function(error){
     console.log("Error lolz " + error);
