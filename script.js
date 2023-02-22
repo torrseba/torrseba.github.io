@@ -63,10 +63,10 @@ astro.addEventListener("submit", (e) => {
     console.log(str);
     //console.log(str.data.imageUrl);
     //document.write(data.imageUrl);
-    document.write(data);
+    document.write(str.data);
     //document.write(str.data.imgUrl);
     //displayImage(data.imageUrl);
-    displayImage(str, 300, 300);
+    /////////displayImage(str.data, 300, 300);
 })
 .catch(function(error){
     console.log("Error lolz " + error);
