@@ -54,7 +54,7 @@ astro.addEventListener("submit", (e) => {
     //"Referrer-Policy": "strict-origin-when-cross-origin"
   },
   method: "POST",
-  body:JSON.stringify({style:"inverted",observer:{latitude:33.775867,longitude:-84.39733,date:"2023-02-20"},view:{type:"area",parameters:{position:{equatorial:{rightAscension:0,declination:0}},zoom:6}}})
+  body:JSON.stringify({style:"inverted",observer:{latitude:lat,longitude:long,date:date},view:{type:"area",parameters:{position:{equatorial:{rightAscension:0,declination:0}},zoom:6}}})
 })
 .then(function(response){
     return response.json();
@@ -69,7 +69,7 @@ astro.addEventListener("submit", (e) => {
     //document.write(str);
     console.log(jsonObj.data.imageUrl);
     //document.write(str.data.imgUrl);
-    displayImage(jsonObj.data.imageUrl, 700, 700);
+    //displayImage(jsonObj.data.imageUrl, 700, 700);
     displayImage(jsonObj.data.imageUrl, 600, 600);
     /////////displayImage(str.data, 300, 300);
 })
