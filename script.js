@@ -18,13 +18,17 @@ const applicationSecret = '34fa54cd9605e3ba1185434c1511f29fb26cb1685121b0dd701b4
 const hash1 = btoa(`${applicationId}:${applicationSecret}`);
 const astro = document.getElementById("astro");
 
-function displayImage(src, width, height) {
-    var img = document.createElement("img");
-    img.src = src;
-    img.width = width;
-    img.height = height;
-    document.body.appendChild(img);
-   }
+//function displayImage(src, width, height) {
+//    var img = document.createElement("img");
+//    img.src = src;
+ //   img.width = width;
+ //   img.height = height;
+//    document.body.appendChild(img);
+//   }
+
+function displayImage(image){
+    document.getElementById("img2").src = image;
+}
 
 astro.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -56,8 +60,8 @@ astro.addEventListener("submit", (e) => {
 .then(function(data){
     console.log(data);
     document.write(data.message);
-    document.write(data.imageUrl);
-    displayImage(data.imageUrl, 320,250);
+    //document.write(data.imageUrl);
+    displayImage(data.message);
 })
 .catch(function(error){
     console.log("Error lolz " + error);
