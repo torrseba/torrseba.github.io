@@ -36,9 +36,9 @@ astro.addEventListener("submit", (e) => {
     e.preventDefault();
     //alert("jawnski submitted");
 
-    const longValue = long.value;
-    const latValue = lat.value;
-    const dateValue = dat.value;
+    var longValue = long.value;
+    var latValue = lat.value;
+    var dateValue = dat.value;
 
     fetch("https://api.astronomyapi.com/api/v2/studio/star-chart", {
   "headers": {
