@@ -39,9 +39,9 @@ astro.addEventListener("submit", (e) => {
     let longValue = long.value;
     let latValue = lat.value;
     let dateValue = dat.value;
-    console.log(typeof longValue)
-    console.log(longValue)
-    console.log(typeof dateValue)
+    //console.log(typeof longValue)
+    //console.log(longValue)
+    //console.log(dateValue)
 
     fetch("https://api.astronomyapi.com/api/v2/studio/star-chart", {
   "headers": {
@@ -61,7 +61,7 @@ astro.addEventListener("submit", (e) => {
     //"Referrer-Policy": "strict-origin-when-cross-origin"
   },
   method: "POST",
-  body:JSON.stringify({style:"inverted",observer:{latitude:Number(latValue),longitude:Number(longValue),date:dateValue},view:{type:"area",parameters:{position:{equatorial:{rightAscension:0,declination:0}},zoom:12}}})
+  body:JSON.stringify({style:"inverted",observer:{latitude:Number(latValue),longitude:Number(longValue),date:dateValue},view:{type:"area",parameters:{position:{equatorial:{rightAscension:0,declination:0}},zoom:9}}})
 })
 .then(function(response){
     return response.json();
@@ -75,7 +75,9 @@ astro.addEventListener("submit", (e) => {
     //document.write(data.imageUrl);
     //document.write(str);
     //console.log(long)
-    console.log(longValue)
+    console.log(longValue);
+    console.log(dateValue);
+    console.log(jsonObj.data);
     console.log(jsonObj.data.imageUrl);
     //document.write(str.data.imgUrl);
     //displayImage(jsonObj.data.imageUrl, 700, 700);
