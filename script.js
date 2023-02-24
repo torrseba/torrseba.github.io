@@ -36,9 +36,9 @@ astro.addEventListener("submit", (e) => {
     e.preventDefault();
     //alert("jawnski submitted");
 
-    var longValue = long.value;
-    var latValue = lat.value;
-    var dateValue = dat.value;
+    let longValue = long.value;
+    let latValue = lat.value;
+    let dateValue = dat.value;
 
     fetch("https://api.astronomyapi.com/api/v2/studio/star-chart", {
   "headers": {
@@ -58,7 +58,7 @@ astro.addEventListener("submit", (e) => {
     //"Referrer-Policy": "strict-origin-when-cross-origin"
   },
   method: "POST",
-  body:JSON.stringify({style:"inverted",observer:{latitude:latValue,longitude:longValue,date:dateValue},view:{type:"area",parameters:{position:{equatorial:{rightAscension:0,declination:0}},zoom:6}}})
+  body:JSON.stringify({style:"inverted",observer:{latitude:67,longitude:55,date:"24:02:2023"},view:{type:"area",parameters:{position:{equatorial:{rightAscension:0,declination:0}},zoom:6}}})
 })
 .then(function(response){
     return response.json();
@@ -71,6 +71,8 @@ astro.addEventListener("submit", (e) => {
     //console.log(str.data.imageUrl);
     //document.write(data.imageUrl);
     //document.write(str);
+    console.log(long)
+    console.log(longValue)
     console.log(jsonObj.data.imageUrl);
     //document.write(str.data.imgUrl);
     //displayImage(jsonObj.data.imageUrl, 700, 700);
