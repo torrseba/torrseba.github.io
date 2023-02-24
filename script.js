@@ -26,7 +26,7 @@ const astro = document.getElementById("astro");
 //    document.body.appendChild(img);
 //   }
 
-function displayImage(src, width, height){
+function displayImage(src, width, height){ //IMAGE ISSUES NOT UPDATING??????
     document.getElementById("img2").src = src;
     document.getElementById("img2").width = width;
     document.getElementById("img2").height = height;
@@ -76,7 +76,7 @@ astro.addEventListener("submit", (e) => {
     //document.write(str);
     //console.log(long)
     console.log(longValue)
-    //console.log(jsonObj.data.imageUrl);
+    console.log(jsonObj.data.imageUrl);
     //document.write(str.data.imgUrl);
     //displayImage(jsonObj.data.imageUrl, 700, 700);
     displayImage(jsonObj.data.imageUrl, 600, 600);
