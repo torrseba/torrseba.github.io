@@ -2,9 +2,9 @@
 //document.body.innerHTML = '<h1>lol<h1>';
 //let input1 =document.getElementsByName('xcoordinate');
 //console.log(input1);
-const long = document.getElementById("long");
-const lat = document.getElementById("lat");
-const dat = document.getElementById("date");
+let long = document.getElementById("long");
+let lat = document.getElementById("lat");
+let dat = document.getElementById("date");
 const style = document.getElementById("style");
 const type = document.getElementById("type");
 const RightA = document.getElementById("RightA");
@@ -58,7 +58,7 @@ astro.addEventListener("submit", (e) => {
     //"Referrer-Policy": "strict-origin-when-cross-origin"
   },
   method: "POST",
-  body:JSON.stringify({style:"inverted",observer:{latitude:67,longitude:55,date:"24:02:2023"},view:{type:"area",parameters:{position:{equatorial:{rightAscension:0,declination:0}},zoom:6}}})
+  body:JSON.stringify({style:"inverted",observer:{latitude:33.775867,longitude:-84.39733,date:"2023-02-20"},view:{type:"area",parameters:{position:{equatorial:{rightAscension:0,declination:0}},zoom:6}}})
 })
 .then(function(response){
     return response.json();
@@ -71,9 +71,9 @@ astro.addEventListener("submit", (e) => {
     //console.log(str.data.imageUrl);
     //document.write(data.imageUrl);
     //document.write(str);
-    console.log(long)
+    //console.log(long)
     console.log(longValue)
-    console.log(jsonObj.data.imageUrl);
+    //console.log(jsonObj.data.imageUrl);
     //document.write(str.data.imgUrl);
     //displayImage(jsonObj.data.imageUrl, 700, 700);
     displayImage(jsonObj.data.imageUrl, 600, 600);
