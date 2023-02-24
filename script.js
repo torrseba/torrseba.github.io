@@ -39,7 +39,9 @@ astro.addEventListener("submit", (e) => {
     let longValue = long.value;
     let latValue = lat.value;
     let dateValue = dat.value;
+    console.log(typeof longValue)
     console.log(longValue)
+    console.log(typeof dateValue)
 
     fetch("https://api.astronomyapi.com/api/v2/studio/star-chart", {
   "headers": {
