@@ -58,7 +58,7 @@ astro.addEventListener("submit", (e) => {
     //"Referrer-Policy": "strict-origin-when-cross-origin"
   },
   method: "POST",
-  body:JSON.stringify({style:"inverted",observer:{latitude:latValue,longitude:longValue,date:"2023-02-20"},view:{type:"area",parameters:{position:{equatorial:{rightAscension:0,declination:0}},zoom:6}}})
+  body:JSON.stringify({style:"inverted",observer:{latitude:60,longitude:20,date:"2023-02-20"},view:{type:"area",parameters:{position:{equatorial:{rightAscension:0,declination:0}},zoom:6}}})
 })
 .then(function(response){
     return response.json();
