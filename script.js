@@ -43,6 +43,21 @@ astro.addEventListener("submit", (e) => {
     //console.log(longValue)
     //console.log(dateValue)
 
+    fetch("https://io.adafruit.com/api/v2/torrseba/feeds/cpeg-eleg298/", {
+        "headers":{
+            "X-AIO-Key":"aio_MAcI68QrJaxfSeG679WAYwA3Tmvu"
+        },
+        method:"GET"
+    }).then(function(response){
+        return response.json();
+    }).then(function(data){
+        var feed = JSON.stringify(data);
+        var feedJsonObj = JSON.parse(feed);
+        console.log(feedJsonObj);
+    })
+
+
+
     fetch("https://api.astronomyapi.com/api/v2/studio/star-chart", {
   "headers": {
     "accept": "application/json, text/plain, */*",
