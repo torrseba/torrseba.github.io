@@ -43,9 +43,9 @@ astro.addEventListener("submit", (e) => {
     //console.log(longValue)
     //console.log(dateValue)
 
-    fetch("https://io.adafruit.com/api/v2/torrseba/feeds/cpeg-eleg298/", {
+    fetch("https://io.adafruit.com/api/v2/torrseba/feeds/cpeg-eleg298", {
         "headers":{
-            "X-AIO-Key":"aio_MAcI68QrJaxfSeG679WAYwA3Tmvu"
+            "x-aio-key":indeed
         },
         method:"GET"
     }).then(function(response){
@@ -54,6 +54,7 @@ astro.addEventListener("submit", (e) => {
         var feed = JSON.stringify(data);
         var feedJsonObj = JSON.parse(feed);
         console.log(feedJsonObj);
+        console.log(feedJsonObj.last_value);
     })
 
 
@@ -62,7 +63,7 @@ astro.addEventListener("submit", (e) => {
   "headers": {
     "accept": "application/json, text/plain, */*",
     "accept-language": "en-US,en;q=0.9",
-    "authorization": "Basic MTJiZDhjMDItYjJiOS00Y2Q5LWE1MjItNmIzZjYzMjM0NjkzOjM0ZmE1NGNkOTYwNWUzYmExMTg1NDM0YzE1MTFmMjlmYjI2Y2IxNjg1MTIxYjBkZDcwMWI0N2FiMWM0YmUwYWVjNDE0ODgzZjcxMzI1OTNlYTEzNWVmYTVlNzM3NTA3ZGMyMWY1YmFhMGY3YWNlMjlkOTRkYThjNTE2NjI4YzYzN2QyMTM5N2I5ZTlmNmRiYTBhMjRiZjYwMmQzYTNkMWI2YTkxNjIyODk1YTM4NDdjODM3M2VjZDc1YzcxMTFlZTdlOWE0ZjZiYzU4MTRmMDQ5ODgxNzZmMTRhMDA5MDBm",
+    "authorization": yes,
     "content-type": "application/json;charset=UTF-8",
     "sec-ch-ua": "\"Chromium\";v=\"110\", \"Not A(Brand\";v=\"24\", \"Google Chrome\";v=\"110\"",
     "sec-ch-ua-mobile": "?0",
