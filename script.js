@@ -45,7 +45,7 @@ astro.addEventListener("submit", (e) => {
 
     fetch("https://io.adafruit.com/api/v2/torrseba/feeds/cpeg-eleg298", {
         "headers":{
-            "x-aio-key":${{AIO_KEY}}
+            "x-aio-key":${{secrets.AIO_KEY}}
         },
         method:"GET"
     }).then(function(response){
@@ -63,7 +63,7 @@ astro.addEventListener("submit", (e) => {
   "headers": {
     "accept": "application/json, text/plain, */*",
     "accept-language": "en-US,en;q=0.9",
-    "authorization":${{AST_KEY}},
+    "authorization":${{secrets.AST_KEY}},
     "content-type": "application/json;charset=UTF-8",
     "sec-ch-ua": "\"Chromium\";v=\"110\", \"Not A(Brand\";v=\"24\", \"Google Chrome\";v=\"110\"",
     "sec-ch-ua-mobile": "?0",
